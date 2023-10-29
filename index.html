@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone Papaer Scissor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div class="subContainers" id="scoreBoard">
+            <div class="scoreNumElems" id="botScoreElem">0</div>
+            <div class="scoreNumElems" id="myScoreElem">0</div>
+            <div class="scoreTextElems" id="botText">Bot</div>
+            <div class="scoreTextElems" id="meText">You</div>
+        </div>
+        <div class="subContainers" id="animation">
+            <div class="animationElems players" id="bot">✊</div>
+            <div class="animationElems" id="versus">v/s</div>
+            <div class="animationElems players" id="me">✊</div>
+        </div>
+        <div class="subContainers" id="buttonBox">
+            <div class="buttonElements" id="playBtn">Play</div>
+            <div class="buttonElements hide" id="replayBtn">Replay</div>
+            <div class="buttonElements numRounds hide" id="three">3</div>
+            <div class="buttonElements numRounds hide" id="five">5</div>
+            <div class="buttonElements numRounds hide" id="ten">10</div>
+            <div class="buttonElements choices hide" id="stone">✊</div>
+            <div class="buttonElements choices hide" id="paper">🖐</div>
+            <div class="buttonElements choices hide" id="scissor">✌</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,367 @@
+@font-face {
+    font-family: digi;
+    src: url(Digital.ttf);
+}
+
+body {
+    background-color: rgb(0, 183, 255);
+    color: white;
+    font-family: sans-serif;
+}
+
+#container {
+    border: 1px solid white;
+    width: 95vw;
+    height: 90vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#scoreBoard {
+    border: 1px solid white;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 120px 120px;
+    background-color: rgb(0, 130, 251);
+    border-radius: 5px;
+}
+
+.scoreNumElems {
+    text-align: center;
+    margin: 10px;
+    font-size: 60px;
+    font-family: digi;
+    font-weight: 900;
+    border: 1px solid white;
+}
+
+.scoreTextElems {
+    border-bottom: 5px solid white;
+    text-align: center;
+    margin: 0px 10px 10px 10px;
+    padding: 5px 0px;
+    font-size: 25px;
+    /* font-family: digi; */
+    /* color: yellow; */
+    font-weight: 900;
+    font-variant: small-caps;
+}
+
+#animation {
+    padding-bottom: 40px;
+    border: 2px solid white;   
+    width: 50%;
+    text-align: center;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 30px 0px;
+    border-radius: 10px;
+    background-color: rgb(0, 130, 251);
+    /* background: rgb(209,0,255); */
+    /* background: linear-gradient(0deg, rgba(209,0,255,1) 10%, rgba(0,130,251,1) 60%, rgba(0,183,255,1) 100%); */
+}
+
+@keyframes processing1 {
+    0% {
+        bottom: 0px;
+        right: 0px
+    }
+
+    5% {
+        bottom: 15px;
+        right: 5px
+    }
+
+    10% {
+        bottom: 30px;
+        right: 10px
+    }
+
+    15% {
+        bottom: 45px;
+        right: 15px
+    }
+
+    20% {
+        bottom: 60px;
+        right: 20px
+    }
+
+    25% {
+        bottom: 75px;
+        right: 25px
+    }
+
+    30% {
+        bottom: 90px;
+        right: 30px
+    }
+
+    35% {
+        bottom: 105px;
+        right: 35px
+    }
+
+    40% {
+        bottom: 120px;
+        right: 40px
+    }
+
+    45% {
+        bottom: 135px;
+        right: 45px
+    }
+
+    50% {
+        bottom: 150px;
+        right: 50px
+    }
+
+    55% {
+        bottom: 135px;
+        right: 45px
+    }
+
+    60% {
+        bottom: 120px;
+        right: 40px
+    }
+
+    65% {
+        bottom: 105px;
+        right: 35px
+    }
+
+    70% {
+        bottom: 90px;
+        right: 30px
+    }
+
+    75% {
+        bottom: 75px;
+        right: 25px
+    }
+
+    80% {
+        bottom: 60px;
+        right: 20px
+    }
+
+    85% {
+        bottom: 45px;
+        right: 15px
+    }
+
+    90% {
+        bottom: 30px;
+        right: 10px
+    }
+
+    95% {
+        bottom: 15px;
+        right: 5px
+    }
+
+    100% {
+        bottom: 0px;
+        right: 0px
+    }
+}
+
+@keyframes processing2 {
+    0% {
+        bottom: 0px;
+        left: 0px
+    }
+
+    5% {
+        bottom: 15px;
+        left: 5px
+    }
+
+    10% {
+        bottom: 30px;
+        left: 10px
+    }
+
+    15% {
+        bottom: 45px;
+        left: 15px
+    }
+
+    20% {
+        bottom: 60px;
+        left: 20px
+    }
+
+    25% {
+        bottom: 75px;
+        left: 25px
+    }
+
+    30% {
+        bottom: 90px;
+        left: 30px
+    }
+
+    35% {
+        bottom: 105px;
+        left: 35px
+    }
+
+    40% {
+        bottom: 120px;
+        left: 40px
+    }
+    
+    45% {
+        bottom: 135px;
+        left: 45px
+    }
+
+    50% {
+        bottom: 150px;
+        left: 50px
+    }
+
+    55% {
+        bottom: 135px;
+        left: 45px
+    }
+
+    60% {
+        bottom: 120px;
+        left: 40px
+    }
+
+    65% {
+        bottom: 105px;
+        left: 35px
+    }
+
+    70% {
+        bottom: 90px;
+        left: 30px
+    }
+
+    75% {
+        bottom: 75px;
+        left: 25px
+    }
+
+    80% {
+        bottom: 60px;
+        left: 20px
+    }
+
+    85% {
+        bottom: 45px;
+        left: 15px
+    }
+
+    90% {
+        bottom: 30px;
+        left: 10px
+    }
+
+    95% {
+        bottom: 15px;
+        left: 5px
+    }
+
+    100% {
+        bottom: 0px;
+        left: 0px
+    }
+}
+
+.animationElems {
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#versus {
+    font-size: 35px;
+    /* margin: 0px 50px; */
+    font-weight: 700;
+    position: relative;
+    /* border: 1px solid white; */
+    width: 200px;
+    font-variant: small-caps;
+}
+
+.players {
+    font-size: 100px;
+    width: 120px;
+    height: 130px;
+    text-align: center;
+    border-bottom: 10px solid rgb(0, 130, 251);
+}
+
+.playing1 {
+    position: relative;
+    animation-name: processing1;
+    animation-duration: 0.25s;
+}
+
+.playing2 {
+    position: relative;
+    animation-name: processing2;
+    animation-duration: 0.25s;
+}
+
+#me {
+    rotate: 270deg;
+}
+
+#bot {
+    transform: scaleX(-1);
+    rotate: 90deg;
+}
+
+
+
+
+
+
+
+
+#buttonBox {
+    display: flex;
+}
+
+.buttonElements{
+    font-weight: 700;
+    height: 55.2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border: 1px solid white;
+    background-color: rgb(0, 130, 251);
+    border-radius: 5px;
+    text-shadow: 1px 1px black;
+    padding: 0px 10px;
+    margin: 0px 10px;
+    cursor:pointer;
+}
+
+.choices{
+    width: 35.2px;
+    transform: rotate(270deg);
+}
+
+.hide{
+    display: none;
+}
+
+.numRounds{
+    width: 30px;
+}

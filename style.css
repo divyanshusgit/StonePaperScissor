@@ -53,7 +53,7 @@ body {
 #animation {
     padding-bottom: 40px;
     border: 2px solid white;   
-    width: 50%;
+    width: 70%;
     text-align: center;
     height: 40%;
     display: flex;
@@ -288,19 +288,23 @@ body {
 }
 
 #versus {
-    font-size: 35px;
-    /* margin: 0px 50px; */
-    font-weight: 700;
+    margin: 0px 50px;
     position: relative;
-    /* border: 1px solid white; */
-    width: 200px;
-    font-variant: small-caps;
+    border:  1px solid white;
+    /* font-variant: small-caps; */
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 35px;
+    /* width: 80px; */
+    display: inline-block;
+    padding: 10px 15px;
 }
 
 .players {
+    border: 1px solid white;
     font-size: 100px;
     width: 120px;
-    height: 130px;
+    line-height: 130px;
     text-align: center;
     border-bottom: 10px solid rgb(0, 130, 251);
 }
@@ -364,4 +368,238 @@ body {
 
 .numRounds{
     width: 30px;
+}
+
+@media (max-width:900px){
+    .players{
+        font-size: 80px;
+        width: 90px;
+        line-height: 95px;
+    }
+}
+
+@media (max-width:750px){
+    .players{
+        font-size: 70px;
+        width: 80px;
+        line-height: 85px;
+    }
+    #versus{
+        font-weight: 700;
+        font-size: 30px;
+        padding: 10px 10px;
+    }
+    @keyframes processing1 {
+        0% {
+            bottom: 0px;
+            right: 0px
+        }
+    
+        5% {
+            bottom: 10px;
+            right: 5px
+        }
+    
+        10% {
+            bottom: 20px;
+            right: 10px
+        }
+    
+        15% {
+            bottom: 30px;
+            right: 15px
+        }
+    
+        20% {
+            bottom: 40px;
+            right: 20px
+        }
+    
+        25% {
+            bottom: 50px;
+            right: 25px
+        }
+    
+        30% {
+            bottom: 60px;
+            right: 30px
+        }
+    
+        35% {
+            bottom: 70px;
+            right: 35px
+        }
+    
+        40% {
+            bottom: 80px;
+            right: 40px
+        }
+    
+        45% {
+            bottom: 90px;
+            right: 45px
+        }
+    
+        50% {
+            bottom: 100px;
+            right: 50px
+        }
+    
+        55% {
+            bottom: 90px;
+            right: 45px
+        }
+    
+        60% {
+            bottom: 80px;
+            right: 40px
+        }
+    
+        65% {
+            bottom: 70px;
+            right: 35px
+        }
+    
+        70% {
+            bottom: 60px;
+            right: 30px
+        }
+    
+        75% {
+            bottom: 50px;
+            right: 25px
+        }
+    
+        80% {
+            bottom: 40px;
+            right: 20px
+        }
+    
+        85% {
+            bottom: 30px;
+            right: 15px
+        }
+    
+        90% {
+            bottom: 20px;
+            right: 10px
+        }
+    
+        95% {
+            bottom: 10px;
+            right: 5px
+        }
+    
+        100% {
+            bottom: 0px;
+            right: 0px
+        }
+    }
+    
+    @keyframes processing2 {
+        0% {
+            bottom: 0px;
+            left: 0px
+        }
+    
+        5% {
+            bottom: 15px;
+            left: 5px
+        }
+    
+        10% {
+            bottom: 30px;
+            left: 10px
+        }
+    
+        15% {
+            bottom: 45px;
+            left: 15px
+        }
+    
+        20% {
+            bottom: 60px;
+            left: 20px
+        }
+    
+        25% {
+            bottom: 75px;
+            left: 25px
+        }
+    
+        30% {
+            bottom: 90px;
+            left: 30px
+        }
+    
+        35% {
+            bottom: 105px;
+            left: 35px
+        }
+    
+        40% {
+            bottom: 120px;
+            left: 40px
+        }
+        
+        45% {
+            bottom: 135px;
+            left: 45px
+        }
+    
+        50% {
+            bottom: 150px;
+            left: 50px
+        }
+    
+        55% {
+            bottom: 135px;
+            left: 45px
+        }
+    
+        60% {
+            bottom: 120px;
+            left: 40px
+        }
+    
+        65% {
+            bottom: 105px;
+            left: 35px
+        }
+    
+        70% {
+            bottom: 90px;
+            left: 30px
+        }
+    
+        75% {
+            bottom: 75px;
+            left: 25px
+        }
+    
+        80% {
+            bottom: 60px;
+            left: 20px
+        }
+    
+        85% {
+            bottom: 45px;
+            left: 15px
+        }
+    
+        90% {
+            bottom: 30px;
+            left: 10px
+        }
+    
+        95% {
+            bottom: 15px;
+            left: 5px
+        }
+    
+        100% {
+            bottom: 0px;
+            left: 0px
+        }
+    }
 }

@@ -19,9 +19,10 @@ Array.from(choices).forEach(button => {
 });
 function buttonFunc(x) {
     roundNumber++;
-    versus.style.bottom = '200px'
+    // versus.style.bottom = '200px'
     // versus.style.width = '150px'
-    versus.style.margin = '0px';
+    // versus.style.fontSize = '25px'
+    // versus.style.margin = '0px';
     versus.innerText = `Round ${roundNumber}`;
     bot.style.borderColor = 'rgb(0,130,251)';
     me.style.borderColor = 'rgb(0,130,251)';
@@ -87,18 +88,17 @@ function buttonFunc(x) {
             // console.log(ran);
             // console.log(myVal);
             setTimeout(() => {
-
                 if (ran == 1) {
                     switch (myVal) {
                         case 3:
                             botScore++;
-                            botScoreElem.innerText = ' ';
+                            // botScoreElem.innerText = ' ';
                             bot.style.borderColor = 'rgb(0,255,0)';
                             me.style.borderColor = 'orangered';
                             break;
                         case 2:
                             myScore++;
-                            myScoreElem.innerText = ' ';
+                            // myScoreElem.innerText = ' ';
                             me.style.borderColor = 'rgb(0,255,0)';
                             bot.style.borderColor = 'orangered';
                             break;
@@ -112,12 +112,12 @@ function buttonFunc(x) {
                     switch (myVal) {
                         case 3:
                             myScore++;
-                            myScoreElem.innerText = ' ';
+                            // myScoreElem.innerText = ' ';
                             me.style.borderColor = 'rgb(0,255,0)';
                             bot.style.borderColor = 'orangered';
                             break;
                         case 1:
-                            botScoreElem.innerText = ' ';
+                            // botScoreElem.innerText = ' ';
                             botScore++;
                             bot.style.borderColor = 'rgb(0,255,0)';
                             me.style.borderColor = 'orangered';
@@ -131,13 +131,13 @@ function buttonFunc(x) {
                 else {
                     switch (myVal) {
                         case 1:
-                            myScoreElem.innerText = ' ';
+                            // myScoreElem.innerText = ' ';
                             myScore++;
                             me.style.borderColor = 'rgb(0,255,0)';
                             bot.style.borderColor = 'orangered';
                             break;
                         case 2:
-                            botScoreElem.innerText = ' ';
+                            // botScoreElem.innerText = ' ';
                             botScore++;
                             bot.style.borderColor = 'rgb(0,255,0)';
                             me.style.borderColor = 'orangered';
@@ -149,10 +149,10 @@ function buttonFunc(x) {
                     }
                 };
                 // console.log(botScore, myScore);
-                setTimeout(() => {
+                // setTimeout(() => {
                     myScoreElem.innerText = myScore;
                     botScoreElem.innerText = botScore;
-                }, 500);
+                // }, 500);
                 if (botScore > myScore) {
                     botText.style.borderColor = 'rgb(0,255,0)';
                     meText.style.borderColor = 'red';
@@ -205,7 +205,7 @@ function gameFinished() {
         }
         else if (botScore == myScore) {
             versus.innerHTML = `It's a tie! &#128528;`;
-            versus.style.backgroundColor = 'rgb(140,140,140)';
+            versus.style.backgroundColor = 'rgb(100,100,100)';
             versus.style.textShadow = '1px 1px rgb(100,100,100)';
         }
         else {
@@ -222,6 +222,6 @@ function gameFinished() {
             function reloadFunc() {
                 location.reload();
             }
-        }, 2000);
-    }, 5000);
+        }, 1000);
+    }, 3000);
 }

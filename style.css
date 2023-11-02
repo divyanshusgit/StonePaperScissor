@@ -10,9 +10,11 @@ body {
 }
 
 #container {
-    border: 1px solid white;
+    /* padding: 0px 10px; */
+    /* border: 1px solid white; */
     width: 95vw;
-    height: 90vh;
+    height: 95vh;
+    min-height: 490px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -36,6 +38,7 @@ body {
     font-family: digi;
     font-weight: 900;
     border: 1px solid white;
+    padding: 10px 0px;
 }
 
 .scoreTextElems {
@@ -51,17 +54,19 @@ body {
 }
 
 #animation {
-    padding-bottom: 40px;
-    border: 2px solid white;   
-    width: 70%;
+    padding-bottom: 20px;
+    border: 1px solid white;   
+    width: 50%;
     text-align: center;
     height: 40%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: flex-end;
     margin: 30px 0px;
     border-radius: 10px;
     background-color: rgb(0, 130, 251);
+    position: relative;
+    min-height: 220px;
     /* background: rgb(209,0,255); */
     /* background: linear-gradient(0deg, rgba(209,0,255,1) 10%, rgba(0,130,251,1) 60%, rgba(0,183,255,1) 100%); */
 }
@@ -288,23 +293,24 @@ body {
 }
 
 #versus {
-    margin: 0px 50px;
-    position: relative;
-    border:  1px solid white;
+    margin: 0px 20px;
+    position: absolute;
+    /* border:  1px solid white; */
     /* font-variant: small-caps; */
     border-radius: 5px;
     font-weight: 700;
-    font-size: 35px;
+    font-size: 25px;
     /* width: 80px; */
     display: inline-block;
-    padding: 10px 15px;
+    padding: 7px 12px;
+    top: 20px;
 }
 
 .players {
-    border: 1px solid white;
-    font-size: 100px;
-    width: 120px;
-    line-height: 130px;
+    /* border: 1px solid white; */
+    font-size: 90px;
+    width: 100px;
+    line-height: 110px;
     text-align: center;
     border-bottom: 10px solid rgb(0, 130, 251);
 }
@@ -323,11 +329,13 @@ body {
 
 #me {
     rotate: 270deg;
+    /* margin-top: 50px; */
 }
 
 #bot {
     transform: scaleX(-1);
     rotate: 90deg;
+    /* margin-top: 50px; */
 }
 
 
@@ -370,25 +378,129 @@ body {
     width: 30px;
 }
 
+#playBtn{
+    font-size: 20px;
+    padding: 0px 15px;
+}
+
+#replayBtn{
+    font-size: 20px;
+    padding: 0px 15px;
+}
+
+@media (max-width:1200px){
+    #animation{
+        width: 60%;
+    }
+}
+
 @media (max-width:900px){
     .players{
         font-size: 80px;
         width: 90px;
-        line-height: 95px;
+        height: 100px;
+        /* border: none; */
+    }
+    #animation{
+        width: 70%;
     }
 }
 
 @media (max-width:750px){
+    /* .players{
+        font-size: 70px;
+        width: 80px;
+        height: 80px;
+    } */
+    /* #versus{
+        font-size: 20px;
+        padding: 7px 10px;
+    } */
+    .scoreNumElems{
+        font-size: 50px;
+    }
+    .scoreTextElems{
+        font-size: 20px;
+    }
+    #scoreBoard{
+        grid-template-columns: 110px 110px;
+    }
+    #animation{
+        width: 75%;
+    }
+}
+
+@media (max-width:700px){
+    #animation{
+        width: 80%;
+    }
+    .scoreNumElems{
+        font-size: 40px;
+    }
+    /* .scoreTextElems{
+        font-size: 20px;
+    } */
+    #scoreBoard{
+        grid-template-columns: 100px 100px;
+    }
+}
+
+@media (max-width:650px), (max-height: 850px){
+/* @media (max-width:650px){ */
     .players{
         font-size: 70px;
         width: 80px;
-        line-height: 85px;
+        height: 90px;
     }
     #versus{
-        font-weight: 700;
-        font-size: 30px;
-        padding: 10px 10px;
+        font-size: 20px;
+        padding: 7px 10px;
     }
+}
+
+@media (max-width:600px){
+    #animation{
+        width: 85%;
+    }
+}
+
+@media (max-width:550px){
+    #animation{
+        width: 90%;
+    }
+}
+
+@media (max-width:500px), (max-height: 700px){
+    /* .players{
+        font-size: 60px;
+        width: 60px;
+        height: 70px;
+    } */
+    /* #container{
+        height: 650px;
+    } */
+    .players{
+        font-size: 60px;
+        width: 80px;
+        height: 70px;
+    }
+    .scoreNumElems{
+        font-size: 30px;
+    }
+}
+
+@media (max-width:450px){
+    #animation{
+        width: 98%;
+    }
+}
+@media (max-width:400px){
+    /* #animation{
+        height: 35%;
+    } */
+    /* .players{
+        top: 50px;
+    } */
     @keyframes processing1 {
         0% {
             bottom: 0px;
@@ -397,97 +509,97 @@ body {
     
         5% {
             bottom: 10px;
-            right: 5px
+            right: 3px
         }
     
         10% {
             bottom: 20px;
-            right: 10px
+            right: 6px
         }
     
         15% {
             bottom: 30px;
-            right: 15px
+            right: 9px
         }
     
         20% {
             bottom: 40px;
-            right: 20px
+            right: 12px
         }
     
         25% {
             bottom: 50px;
-            right: 25px
+            right: 15px
         }
     
         30% {
             bottom: 60px;
-            right: 30px
+            right: 18px
         }
     
         35% {
             bottom: 70px;
-            right: 35px
+            right: 21px
         }
     
         40% {
             bottom: 80px;
-            right: 40px
+            right: 24px
         }
     
         45% {
             bottom: 90px;
-            right: 45px
+            right: 27px
         }
     
         50% {
             bottom: 100px;
-            right: 50px
+            right: 30px
         }
     
         55% {
             bottom: 90px;
-            right: 45px
+            right: 27px
         }
     
         60% {
             bottom: 80px;
-            right: 40px
+            right: 24px
         }
     
         65% {
             bottom: 70px;
-            right: 35px
+            right: 21px
         }
     
         70% {
             bottom: 60px;
-            right: 30px
+            right: 18px
         }
     
         75% {
             bottom: 50px;
-            right: 25px
+            right: 15px
         }
     
         80% {
             bottom: 40px;
-            right: 20px
+            right: 12px
         }
     
         85% {
             bottom: 30px;
-            right: 15px
+            right: 9px
         }
     
         90% {
             bottom: 20px;
-            right: 10px
+            right: 6px
         }
     
         95% {
             bottom: 10px;
-            right: 5px
+            right: 3px
         }
     
         100% {
@@ -503,103 +615,153 @@ body {
         }
     
         5% {
-            bottom: 15px;
-            left: 5px
+            bottom: 10px;
+            left: 3px
         }
     
         10% {
-            bottom: 30px;
-            left: 10px
+            bottom: 20px;
+            left: 6px
         }
     
         15% {
-            bottom: 45px;
-            left: 15px
+            bottom: 30px;
+            left: 9px
         }
     
         20% {
-            bottom: 60px;
-            left: 20px
+            bottom: 40px;
+            left: 12px
         }
     
         25% {
-            bottom: 75px;
-            left: 25px
-        }
-    
-        30% {
-            bottom: 90px;
-            left: 30px
-        }
-    
-        35% {
-            bottom: 105px;
-            left: 35px
-        }
-    
-        40% {
-            bottom: 120px;
-            left: 40px
-        }
-        
-        45% {
-            bottom: 135px;
-            left: 45px
-        }
-    
-        50% {
-            bottom: 150px;
-            left: 50px
-        }
-    
-        55% {
-            bottom: 135px;
-            left: 45px
-        }
-    
-        60% {
-            bottom: 120px;
-            left: 40px
-        }
-    
-        65% {
-            bottom: 105px;
-            left: 35px
-        }
-    
-        70% {
-            bottom: 90px;
-            left: 30px
-        }
-    
-        75% {
-            bottom: 75px;
-            left: 25px
-        }
-    
-        80% {
-            bottom: 60px;
-            left: 20px
-        }
-    
-        85% {
-            bottom: 45px;
+            bottom: 50px;
             left: 15px
         }
     
-        90% {
+        30% {
+            bottom: 60px;
+            left: 18px
+        }
+    
+        35% {
+            bottom: 70px;
+            left: 21px
+        }
+    
+        40% {
+            bottom: 80px;
+            left: 24px
+        }
+    
+        45% {
+            bottom: 90px;
+            left: 27px
+        }
+    
+        50% {
+            bottom: 100px;
+            left: 30px
+        }
+    
+        55% {
+            bottom: 90px;
+            left: 27px
+        }
+    
+        60% {
+            bottom: 80px;
+            left: 24px
+        }
+    
+        65% {
+            bottom: 70px;
+            left: 21px
+        }
+    
+        70% {
+            bottom: 60px;
+            left: 18px
+        }
+    
+        75% {
+            bottom: 50px;
+            left: 15px
+        }
+    
+        80% {
+            bottom: 40px;
+            left: 12px
+        }
+    
+        85% {
             bottom: 30px;
-            left: 10px
+            left: 9px
+        }
+    
+        90% {
+            bottom: 20px;
+            left: 6px
         }
     
         95% {
-            bottom: 15px;
-            left: 5px
+            bottom: 10px;
+            left: 3px
         }
     
         100% {
             bottom: 0px;
             left: 0px
         }
+    }
+    
+    .scoreNumElems{
+        font-size: 20px;
+    }
+    .scoreTextElems{
+        font-size: 16px;
+    }
+    #scoreBoard{
+        grid-template-columns: 80px 80px;
+    }
+}
+
+/* @media (max-width:350px){ */
+@media (max-width:350px), (max-height:600px){
+    /* #container{
+        height: 600px;
+    } */
+    #animation{
+        height: 35%;
+        padding-bottom: 10px;
+    }
+    .players{
+        font-size: 50px;
+        width: 60px;
+        height: 60px;
+    }
+    /* #versus{
+        font-size: 16px;
+    } */
+}
+
+@media (max-height:700px){
+    #animation{
+        height: 250px;
+        margin: 20px 0px;
+    }
+    .scoreNumElems{
+        font-size: 20px;
+    }
+    .scoreTextElems{
+        font-size: 16px;
+    }
+    #scoreBoard{
+        grid-template-columns: 80px 80px;
+    }
+}
+@media (max-height:600px){
+    #animation{
+        margin: 15px 0px;
     }
 }

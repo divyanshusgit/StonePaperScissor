@@ -1,3 +1,10 @@
+let roundWin = document.getElementById('roundWin');
+let roundLose = document.getElementById('roundLose');
+let gameWin = document.getElementById('gameWin');
+let gameLose = document.getElementById('gameLose');
+gameWin.volume = 1;
+gameLose.volume = 1;
+
 const versus = document.getElementById('versus');
 const bot = document.getElementById('bot');
 const me = document.getElementById('me');
@@ -95,12 +102,20 @@ function buttonFunc(x) {
                             // botScoreElem.innerText = ' ';
                             bot.style.borderColor = 'rgb(0,255,0)';
                             me.style.borderColor = 'orangered';
+                            roundLose.play();
+                            // setTimeout(() => {
+                            //     roundLose.pause();
+                            // }, 1900);
                             break;
                         case 2:
                             myScore++;
                             // myScoreElem.innerText = ' ';
                             me.style.borderColor = 'rgb(0,255,0)';
                             bot.style.borderColor = 'orangered';
+                            roundWin.play();
+                            // setTimeout(() => {
+                            //     roundWin.pause();
+                            // }, 1900);
                             break;
                         default:
                             bot.style.borderColor = 'white';
@@ -115,12 +130,20 @@ function buttonFunc(x) {
                             // myScoreElem.innerText = ' ';
                             me.style.borderColor = 'rgb(0,255,0)';
                             bot.style.borderColor = 'orangered';
+                            roundWin.play();
+                            // setTimeout(() => {
+                            //     roundWin.pause();
+                            // }, 1900);
                             break;
                         case 1:
                             // botScoreElem.innerText = ' ';
                             botScore++;
                             bot.style.borderColor = 'rgb(0,255,0)';
                             me.style.borderColor = 'orangered';
+                            roundLose.play();
+                            // setTimeout(() => {
+                            //     roundLose.pause();
+                            // }, 1900);
                             break;
                         default:
                             bot.style.borderColor = 'white';
@@ -135,12 +158,20 @@ function buttonFunc(x) {
                             myScore++;
                             me.style.borderColor = 'rgb(0,255,0)';
                             bot.style.borderColor = 'orangered';
+                            roundWin.play();
+                            // setTimeout(() => {
+                            //     roundWin.pause();
+                            // }, 1900);
                             break;
                         case 2:
                             // botScoreElem.innerText = ' ';
                             botScore++;
                             bot.style.borderColor = 'rgb(0,255,0)';
                             me.style.borderColor = 'orangered';
+                            roundLose.play();
+                            // setTimeout(() => {
+                            //     roundLose.pause();
+                            // }, 1900);
                             break;
                         default:
                             bot.style.borderColor = 'white';
@@ -173,12 +204,14 @@ function buttonFunc(x) {
 playBtn.addEventListener('click', playBtnFunc);
 function playBtnFunc() {
     setTimeout(() => {
+        versus.innerText = 'Select the number of of rounds';
         playBtn.style.display = 'none';
         Array.from(numRounds).forEach(elem => {
             elem.style.display = 'flex';
             elem.addEventListener('click', showChoices);
             function showChoices(elem) {
                 setTimeout(() => {
+                    versus.innerText = 'Bot v/s You'
                     totalRounds = elem.target.innerText;
                     Array.from(choices).forEach(elem => {
                         elem.style.display = 'flex';
@@ -201,17 +234,26 @@ function gameFinished() {
         if (botScore > myScore) {
             versus.innerHTML = `You Lost! &#128551;`;
             versus.style.backgroundColor = 'orangered';
-            versus.style.textShadow = 'darkred';
+            versus.style.textShadow = '1px 1px darkred';
+            setTimeout(() => {
+                gameLose.volume = 0.5;
+                gameLose.play();
+            }, 2000);
         }
         else if (botScore == myScore) {
             versus.innerHTML = `It's a tie! &#128528;`;
-            versus.style.backgroundColor = 'rgb(100,100,100)';
-            versus.style.textShadow = '1px 1px rgb(100,100,100)';
+            versus.style.backgroundColor = 'white';
+            versus.style.textShadow = '1px 1px rgb(220,220,220)';
+            versus.style.color = 'black';
         }
         else {
-            versus.innerHTML = `You Won! &#129395;`;
+            versus.innerHTML = `Congrats, You Won! &#129395;`;
             versus.style.backgroundColor = 'rgb(0,224,0)';
             versus.style.textShadow = '1px 1px green';
+            setTimeout(() => {
+                gameWin.volume = 0.5;
+                gameWin.play();
+            }, 2000);
         }
         setTimeout(() => {
             Array.from(choices).forEach(elem => {
